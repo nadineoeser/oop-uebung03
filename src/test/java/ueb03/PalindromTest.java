@@ -15,7 +15,6 @@ public class PalindromTest {
 				"Anna",
 				"Regallager",
 				"Ein Neger mit Gazelle zagt im Regen nie",
-				"Eine güldne gute Tugend Lüge nie"
 		};
 
 		for (String s : xs) {
