@@ -16,8 +16,8 @@ class Duplikate {
 		}
 		text = sb.toString();
 
-		Set s1 = new SetImpl();
-		Set s2 = new SetImpl();
+		Set<String> s1 = new SetImpl<>();
+		Set<String> s2 = new SetImpl<>();
 
 		for (String w : text.split(" ")) {
 			// kennt das erste Set das Wort bereits, so tritt es zum 2. mal auf!

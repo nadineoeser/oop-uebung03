@@ -1,17 +1,17 @@
 package ueb03;
 
-interface Set {
+interface Set<T> {
 	/**
 	 * Fügt das übergebene Element in das Set ein.
 	 * @param s
 	 * @return true, wenn `s` neu eingefügt wurde, false wenn es bereits enthalten war
 	 */
-	boolean add(String s);
+	boolean add(T s);
 
 	/**
 	 * Prüft, ob ein Element im Set enthalten ist.
 	 */
-	boolean contains(String s);
+	boolean contains(T s);
 
 	/**
 	 * Entfernt ein Element aus dem Set; wirft eine NoSuchElementException
@@ -20,7 +20,7 @@ interface Set {
 	 * @return Das entfernte Element
 	 * @throws java.util.NoSuchElementException Wenn das Element nicht vorhanden war.
 	 */
-	String remove(String s);
+	T remove(T s);
 
 	/**
 	 * Gibt die Größe des Sets zurück

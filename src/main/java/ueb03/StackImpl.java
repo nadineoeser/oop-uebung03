@@ -2,11 +2,11 @@ package ueb03;
 
 import java.util.NoSuchElementException;
 
-public class StackImpl implements Stack {
+public class StackImpl<T> implements Stack<T> {
 	class Element {
-		char value;
+		T value;
 		Element next;
-		Element(char value, Element next) {
+		Element(T value, Element next) {
 			this.value = value;
 			this.next = next;
 		}
@@ -15,17 +15,18 @@ public class StackImpl implements Stack {
 	private Element top;
 	private int s = 0;
 
+
 	@Override
-	public void push(char c) {
+	public void push(T c) {
 		top = new Element(c, top);
 		s++;
 	}
 
 	@Override
-	public char pop() {
+	public T pop() {
 		if (top == null)
 			throw new NoSuchElementException();
-		char v = top.value;
+		T v = top.value;
 		top = top.next;
 		s--;
 		return v;
